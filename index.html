@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .Image{
+            margin-top: 50px;
+            width: 20%;
+        }
+        .ImageContainer{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="ImageContainer">
+        <img class="Image" src="./source/Murder.png" alt="Google Logo">
+    </div>
+    <div class="container">
+        <input type="password" id="passwordInput" placeholder="Enter your password">
+        <div class="button">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="output" class="output"></div>
+    </div>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const outputDiv = document.getElementById('output');
+            if (password === '123') {
+                outputDiv.textContent = '524';
+                outputDiv.style.color = 'green';
+            } else {
+                outputDiv.textContent = 'Incorrect password, Are you for real?';
+                outputDiv.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
